@@ -80,6 +80,7 @@ class GameWebSocket(tornado.websocket.WebSocketHandler):
                 for x in cls.connections: 
                     if not x.player:
                         x.write_message({'state':'wait'})
+			return
             if (not 'x' in players) and (not 'o' in players):
                 print 'In 1'
                 cls.connections[0].player = 'x'
