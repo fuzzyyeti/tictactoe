@@ -8,7 +8,7 @@ import numpy as np
 
 class Game(object):
     def __init__(self):
-        self.board = np.array([[None]*3 for x in range(3)])
+        self.board = np.array([['']*3 for x in range(3)])
         self.current_player_cycle = cycle(('x','o'))
         self.current_player = 'o'
     @staticmethod
